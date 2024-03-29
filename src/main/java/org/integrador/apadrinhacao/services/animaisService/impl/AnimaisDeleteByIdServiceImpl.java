@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.integrador.apadrinhacao.exceptions.NotFoundException;
 import org.integrador.apadrinhacao.models.AnimaisModel;
 import org.integrador.apadrinhacao.repositories.AnimaisRepository;
-import org.integrador.apadrinhacao.services.AnimaisDeleteByIdService;
+import org.integrador.apadrinhacao.services.animaisService.AnimaisDeleteByIdService;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
