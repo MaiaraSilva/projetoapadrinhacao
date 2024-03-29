@@ -1,4 +1,4 @@
-package org.integrador.apadrinhacao.services;
+package org.integrador.apadrinhacao.services.animaisService;
 
 import org.springframework.stereotype.Service;
 

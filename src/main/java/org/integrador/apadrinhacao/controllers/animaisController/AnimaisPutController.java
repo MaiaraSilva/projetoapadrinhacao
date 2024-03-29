@@ -2,7 +2,7 @@ package org.integrador.apadrinhacao.controllers.animaisController;
 
 import lombok.RequiredArgsConstructor;
 import org.integrador.apadrinhacao.models.AnimaisModel;
-import org.integrador.apadrinhacao.services.AnimaisPutService;
+import org.integrador.apadrinhacao.services.animaisService.AnimaisPutService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +17,7 @@ public class AnimaisPutController {
     private final AnimaisPutService animaisPutService;
 
     @PutMapping
-    public ResponseEntity<AnimaisModel> alteraAtleta(@RequestBody AnimaisModel animaisModel){
+    public ResponseEntity<AnimaisModel> alteraAnimais(@RequestBody AnimaisModel animaisModel){
         try {
             AnimaisModel animais = animaisPutService.updateAnimais(animaisModel);
             return ResponseEntity.status(HttpStatus.ACCEPTED).body(animais);

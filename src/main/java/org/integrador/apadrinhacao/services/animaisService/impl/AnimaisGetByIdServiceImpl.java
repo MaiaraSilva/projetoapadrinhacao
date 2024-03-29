@@ -3,7 +3,7 @@ package org.integrador.apadrinhacao.services.animaisService.impl;
 import lombok.RequiredArgsConstructor;
 import org.integrador.apadrinhacao.models.AnimaisModel;
 import org.integrador.apadrinhacao.repositories.AnimaisRepository;
-import org.integrador.apadrinhacao.services.AnimaisGetByIdService;
+import org.integrador.apadrinhacao.services.animaisService.AnimaisGetByIdService;
 import org.springframework.stereotype.Service;
 
 @Service

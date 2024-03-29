@@ -2,7 +2,7 @@ package org.integrador.apadrinhacao.controllers.animaisController;
 
 import lombok.RequiredArgsConstructor;
 import org.integrador.apadrinhacao.models.AnimaisModel;
-import org.integrador.apadrinhacao.services.AnimaisGetByIdService;
+import org.integrador.apadrinhacao.services.animaisService.AnimaisGetByIdService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpClientErrorException;
