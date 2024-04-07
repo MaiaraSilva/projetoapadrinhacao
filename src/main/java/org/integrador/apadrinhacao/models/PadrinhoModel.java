@@ -4,7 +4,9 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.integrador.apadrinhacao.enums.StatusApadrinhamentoEnum;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Data
@@ -19,14 +21,11 @@ public class PadrinhoModel {
     private String nome;
     private String email;
     private String telefone;
-    private String cidade;
-    private String interesses;
+    private String endereco;
+    private LocalDate data_apadrinhamento;
+    private StatusApadrinhamentoEnum status;
 
-    @ManyToMany
-    @JoinTable(
-            name = "apadrinhamentos_tb",
-            joinColumns = @JoinColumn(name = "id_padrinho"),
-            inverseJoinColumns = @JoinColumn(name = "id_animal")
-    )
-    private List<AnimaisModel> apadrinhamentos;
+    @ManyToMany(mappedBy = "padrinho")
+    private List<AnimalModel> animal;
+
 }

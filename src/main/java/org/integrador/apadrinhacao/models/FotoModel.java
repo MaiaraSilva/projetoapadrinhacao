@@ -4,21 +4,20 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.integrador.apadrinhacao.enums.StatusEnum;
-
-import java.util.Date;
+import org.integrador.apadrinhacao.enums.TipoFotoEnum;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "apadrinhamentos_tb")
-public class ApadrinhamentosModel {
-    private Integer id_padrinho;
-    private Integer id_animal;
+@Table(name = "foto_tb")
+public class FotoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Date data_inicio;
-    private StatusEnum status;
+    private String caminho;
+    private TipoFotoEnum tipo_foto;
+    @ManyToOne
+    @JoinColumn(name = "animal_id")
+    private AnimalModel animal;
 }

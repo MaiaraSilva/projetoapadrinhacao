@@ -1,12 +1,11 @@
 package org.integrador.apadrinhacao.enums;
 
-public enum GeneroEnum {
-    MACHO("Macho"),
-    FEMEA("Fêmea");
-
+public enum StatusApadrinhamentoEnum {
+    ATIVO("Ativo"),
+    INATIVO("Inativo");
     private final String descricao;
 
-    GeneroEnum(String descricao) {
+    StatusApadrinhamentoEnum(String descricao) {
         this.descricao = descricao;
     }
 
