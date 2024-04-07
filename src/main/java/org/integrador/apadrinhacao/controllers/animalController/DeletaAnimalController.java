@@ -1,7 +1,7 @@
-package org.integrador.apadrinhacao.controllers.animalController;
+package org.integrador.apadrinhacao.controllers.animaisController;
 
 import lombok.RequiredArgsConstructor;
-import org.integrador.apadrinhacao.services.animalService.DeletaAnimalService;
+import org.integrador.apadrinhacao.services.animaisService.AnimaisDeleteByIdService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,16 +10,16 @@ import org.springframework.web.client.HttpClientErrorException;
 @RestController
 @CrossOrigin("*")
 @RequiredArgsConstructor
-@RequestMapping("/animal")
-public class DeletaAnimalController {
+@RequestMapping("/animais")
+public class AnimaisDeleteByIdController {
 
-    private final DeletaAnimalService deletaAnimalService;
+    private final AnimaisDeleteByIdService animaisDeleteByIdService;
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> apagaAnimalById(@PathVariable Integer id)
+    public ResponseEntity<Void> apagaAnimaisById(@PathVariable Integer id)
     {
         try {
-            deletaAnimalService.deleteAnimalById(id);
+            animaisDeleteByIdService.deleteAnimaisById(id);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (HttpClientErrorException e) {
             throw new HttpClientErrorException(e.getStatusCode(), e.getMessage());
