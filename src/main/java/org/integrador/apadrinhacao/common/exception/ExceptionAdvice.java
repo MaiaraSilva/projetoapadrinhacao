@@ -1,4 +1,4 @@
-package org.integrador.apadrinhacao.advice;
+package org.integrador.apadrinhacao.common.exception;
 
 import lombok.RequiredArgsConstructor;
 import org.integrador.apadrinhacao.exceptions.NotFoundException;

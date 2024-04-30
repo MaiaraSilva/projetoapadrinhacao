@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -17,11 +18,11 @@ public class AnimalModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
-    private Integer idade;
+    private Date data_nascimento;
+    private String descricao;
+    private String cor;
     private String historia;
-    private String personalidade_comportamento;
-    private String compatibilidade;
-    private String requisitos_apadrinhamento;
+    private String raca;
 
     @OneToMany(mappedBy = "animal", cascade = CascadeType.ALL)
     private List<FotoModel> fotos;

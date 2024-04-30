@@ -16,6 +16,7 @@ public class FotoModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String caminho;
+    @Enumerated(EnumType.STRING)
     private TipoFotoEnum tipo_foto;
     @ManyToOne
     @JoinColumn(name = "animal_id")
