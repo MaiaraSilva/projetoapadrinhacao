@@ -22,8 +22,6 @@ public class PadrinhoModel {
     private String email;
     private String telefone;
     private String endereco;
-    private LocalDate data_apadrinhamento;
-    private StatusApadrinhamentoEnum status;
 
     @ManyToMany(mappedBy = "padrinho")
     private List<AnimalModel> animal;
